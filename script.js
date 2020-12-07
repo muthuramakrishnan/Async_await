@@ -24,7 +24,7 @@ function getWeatherData(latlang){
 
     return new Promise((resolve, reject)=>{
         let xhr = new XMLHttpRequest();
-        let url = 'http://api.openweathermap.org/data/2.5/weather?lat='+latlang[0]+'&lon='+latlang[1]+'&units=metric&appid=0da05f35eafdccd9f0abb31590bc0e42';
+        let url = 'https://api.openweathermap.org/data/2.5/weather?lat='+latlang[0]+'&lon='+latlang[1]+'&units=metric&appid=0da05f35eafdccd9f0abb31590bc0e42';
         xhr.open('GET',url,true);
         xhr.onreadystatechange = function(){
             if(xhr.readyState == 4 && xhr.status==200)
